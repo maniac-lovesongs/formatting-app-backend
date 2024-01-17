@@ -1,0 +1,2 @@
+FLASK_APP=formatting_app_backend.py
+FLASK_ENV=development
