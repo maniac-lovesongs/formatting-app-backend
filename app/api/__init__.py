@@ -15,4 +15,7 @@ bp.register_blueprint(users_bp, url_prefix="/users")
 from app.api.roles import bp as roles_bp
 bp.register_blueprint(roles_bp, url_prefix="/roles")
 
+from app.api.auth import bp as auth_bp
+bp.register_blueprint(auth_bp, url_prefix="/auth")
+
 from app.api import routes
