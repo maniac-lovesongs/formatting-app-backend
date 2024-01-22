@@ -25,4 +25,6 @@ class User(UserMixin,Base):
     
     def to_json(self):        
         return {"username": self.username,
+                "id": self.id, 
+                "role_id": self.role_id,
                 "email": self.email}

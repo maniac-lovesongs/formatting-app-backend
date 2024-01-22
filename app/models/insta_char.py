@@ -12,6 +12,7 @@ class InstaChar(Base):
     def to_json(self):
         return {"value": self.value, 
                 "symbol": self.symbol.decode("utf-8"), 
+                "id": self.id,
                 "font_id": self.font_id, 
                 "style_id": self.style_id}
 

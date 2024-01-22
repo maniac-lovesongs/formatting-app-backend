@@ -5,9 +5,6 @@ from app.models.insta_char import InstaChar
 from app.api.fonts.utils import process_name as font_pn 
 from app.api.styles.utils import process_name as style_pn
 
-@bp.route('/')
-def index():
-    return 'This is The Character Set Blueprint'
 
 @bp.route('/font/<f>/style/<s>')
 def getCharacterSet(f,s):
