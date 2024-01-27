@@ -29,6 +29,8 @@ def getCharacterSet(f,s):
     c_set = {k["value"]: k for k in [c.to_json() for c in c_set]}
     return {"characters": c_set, 
             "font": f_name, 
+            "availableStyles": font.styles.split(","),
+            "styleInfo": style.to_json(),
             "style": s_name,
             "font_id": font.id, 
             "style_id": style.id}
