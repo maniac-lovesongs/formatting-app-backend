@@ -15,7 +15,10 @@ def create_app(config_class=Config):
     login.init_app(app)
     login.login_view = 'auth.login'
 
-    cors.init_app(app, origins=["http://localhost:3000", "https://localhost:3000","http://localhost:3001", "https://localhost:3001"])
+    origins=["http://localhost:3000", "https://localhost:3000", "http://localhost:3001", "https://localhost:3001"]
+    app.config['CORS_HEADERS'] = 'Content-Type'
+    resources={r"/*": {"origins": origins, "allow_headers": "*"}}
+    cors.init_app(app, resoures=resources)
 
     # Register blueprints
     from app.main import bp as main_bp
